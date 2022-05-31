@@ -1,0 +1,137 @@
+.header {
+    background-color: #066163;
+    display: flex;
+}
+
+.links {
+    flex: 1;
+    list-style: none;
+    color: #f2f2f2;
+    display: inline-block;
+
+}
+
+svg {
+    margin-top: 15px;
+}
+
+li {
+    display: inline-block;
+    padding: 23px 14px;
+}
+
+li:hover {
+    transform: translateY(-0.25rem);
+    cursor: pointer;
+}
+
+.text {
+    color: #f2f2f2;
+}
+
+.auth-button:hover, .btn:hover{
+    transform: translateY(-0.25rem);
+    cursor: pointer;
+}
+
+.sign-out-btn:hover {
+    cursor: pointer;
+}
+
+.auth-button {
+    background-color: #066163;
+    border: 1px solid;
+    border-radius: 12px;
+    width: 150px;
+    height: 25px;
+}
+.btn{
+
+    background-color: #066163;
+    border: 1px solid;
+    border-radius: 12px;
+    width: 150px;
+    height: 25px;
+
+}
+
+.unauthorized-content {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.user-header {
+    display: flex;
+    color: #f2f2f2;
+    top: 9%;
+    position: absolute;
+
+}
+
+.sign-out-btn {
+    background-color: red;
+    border: 1px solid;
+    border-radius: 12px;
+    width: 150px;
+    height: 25px;
+
+}
+
+.collapsible {
+    background-color: #066163;
+    color: #f2f2f2;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    font-size: 15px;
+    width:100%
+}
+
+
+.collapsible-functions {
+    list-style: none;
+    color: #f2f2f2;
+    display:block;
+    position:absolute;
+    top:18%
+
+
+}
+.collapsible-list {
+    
+    color: #f2f2f2;
+    display:block;
+
+
+}
+
+.collapsible:hover {
+    background-color: #CDBE78;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    color:#f2f2f2;
+}
+
+/* .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  } */

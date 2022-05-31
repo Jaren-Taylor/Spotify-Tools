@@ -1,0 +1,56 @@
+<div [hidden]="isRegister" class="form-container">
+    <h1 class="header">
+        Spotify User Data
+    </h1>
+    <form (ngSubmit)="onSubmit(user)" #userSignInForm="ngForm">
+        <div class="form-group">
+            <input class="form-input-component" type="text" placeholder="Username" id="username" required
+                [(ngModel)]="user.username" name="username">
+        </div>
+
+        <div class="form-group">
+            <input class="form-input-component" type="password" placeholder="Password" id="password" required
+                [(ngModel)]="user.password" name="password">
+        </div>
+        <div class="alert" [hidden]="signInSucceeded || userSignInForm.pristine || !userSignInForm.valid || signInSucceeded == null">
+            Incorrect Sign In info
+        </div>
+        <div class="alert" [hidden]="isUserRegistered || userSignInForm.pristine || isUserRegistered == null">
+            You're not a registered User, please Register
+        </div>
+        <button class="form-btn" [disabled]="!userSignInForm.valid">Sign In</button>
+    </form>
+    <div class="footer-options">
+        <a (click)="switchForm()"> Need to register? </a>
+    </div>
+</div>
+
+<div [hidden]="!isRegister" class="form-container">
+    <h1 class="header">
+        Spotify User Data
+    </h1>
+    <form (ngSubmit)="tryRegisterUser(user)" #userRegistrationForm="ngForm">
+        <div class="form-group">
+            <input class="form-input-component" type="text" placeholder="Enter a username" id="username" required
+                [(ngModel)]="user.username" name="username">
+        </div>
+
+        <div class="form-group">
+            <input class="form-input-component" type="password" placeholder="Enter a password" id="password" required
+                [(ngModel)]="user.password" name="password">
+        </div>
+        <div class="form-group">
+            <input class="form-input-component" type="password" placeholder="Re-enter your password"
+                id="passwordConfirmation" required [(ngModel)]="user.passwordConfirmation" name="passwordConfirmation">
+            <div class="alert" [hidden]="user.password === user.passwordConfirmation || user.passwordConfirmation == null || user.password == null">
+                Your Passwords do not match
+            </div>
+        </div>
+
+        <button class="form-btn" [disabled]="!userRegistrationForm.valid || user.password != user.passwordConfirmation ">Sign In</button>
+    </form>
+    <div class="footer-options">
+        <a (click)="switchForm()"> Already a user? </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

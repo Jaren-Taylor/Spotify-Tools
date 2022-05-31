@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SpotifyTools"
+    }
+  },
+  "defaultProject": "SpotifyTools",
+  "cli": {
+    "analytics": "bd47dc26-b58c-4c58-8f24-8bb1dc3e7383"
+  }
 }
